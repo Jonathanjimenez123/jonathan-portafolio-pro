@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080c16">
+  <meta name="description" content="Portafolio profesional de Jonathan Jiménez Escobar. Proyectos de calidad de datos, automatización, desarrollo backend, inteligencia artificial y ciberseguridad.">
+  <meta name="author" content="Jonathan Jiménez Escobar">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jonathan Jiménez | Ingeniería de Sistemas">
+  <meta property="og:description" content="Proyectos tecnológicos, calidad de datos, automatización y desarrollo de software.">
+  <title>Jonathan Jiménez | Portafolio Profesional</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    /* Ajustes de presentación y accesibilidad */
+    .project-art img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .project-art.data-art {
+      display: block;
+      padding: 0;
+      overflow: hidden;
+      background: #0b1120;
+    }
+
+    .project-art.data-art img {
+      transition: transform .35s ease;
+    }
+
+    .project-card:hover .project-art.data-art img {
+      transform: scale(1.025);
+    }
+
+    .project-card[hidden] {
+      display: none !important;
+    }
+
+    .profile-links,
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .profile-links a,
+    .project-links a {
+      overflow-wrap: anywhere;
+    }
+
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 12px;
+      z-index: 9999;
+      padding: 12px 16px;
+      background: #fff;
+      color: #080c16;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="#home" aria-label="Jonathan Jiménez, inicio">
+        <span class="brand-mark">J.</span>
+        <span class="brand-name">JONATHAN JIMÉNEZ<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#about" data-es="Perfil" data-en="About">Perfil</a>
+        <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <a href="#technologies" data-es="Tecnologías" data-en="Technologies">Tecnologías</a>
+        <a href="#education" data-es="Formación" data-en="Education">Formación</a>
+        <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
+      </nav>
+
+      <button
+        class="language-toggle"
+        id="language-toggle"
+        type="button"
+        aria-label="Switch to English"
+      >EN ↗</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="status-indicator"></span>
+            <span data-es="PORTAFOLIO PROFESIONAL · " data-en="PROFESSIONAL PORTFOLIO · ">PORTAFOLIO PROFESIONAL · </span>
+          </div>
+
+          <h1
+            data-es="Construyo soluciones.<br><span class='gradient-text'>Transformo problemas</span> en tecnología."
+            data-en="I build solutions.<br><span class='gradient-text'>Turning problems</span> into technology."
+          >Construyo soluciones.<br><span class="gradient-text">Transformo problemas</span> en tecnología.</h1>
+
+          <p
+            class="hero-description"
+            data-es="Soy Jonathan Jiménez Escobar, ingeniero de sistemas enfocado en calidad de datos, automatización, desarrollo backend y soluciones tecnológicas útiles."
+            data-en="I'm Jonathan Jiménez Escobar, a systems engineer focused on data quality, automation, backend development, and useful technology solutions."
+          >Soy Jonathan Jiménez Escobar, ingeniero de sistemas enfocado en calidad de datos, automatización, desarrollo backend y soluciones tecnológicas útiles.</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              <span data-es="Explorar proyectos" data-en="Explore projects">Explorar proyectos</span> ↗
+            </a>
+            <a class="button button-secondary" href="#contact">
+              <span data-es="Contactarme" data-en="Get in touch">Contactarme</span>
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span class="hero-note-line"></span>
+            <p data-es="Proyectos personales · Aprendizaje continuo · Soluciones verificables" data-en="Personal projects · Continuous learning · Verifiable solutions">Proyectos personales · Aprendizaje continuo · Soluciones verificables</p>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Ilustración de desarrollo de software">
+          <div class="visual-glow"></div>
+          <div class="code-window">
+            <div class="window-top">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>solution.py</span>
+              <span class="window-language">PY</span>
+            </div>
+            <div class="code-content">
+              <p><span class="code-muted">01</span> <span class="code-purple">class</span> <span class="code-blue">Solution</span>:</p>
+              <p><span class="code-muted">02</span> &nbsp; <span class="code-purple">def</span> <span class="code-blue">build</span>(self):</p>
+              <p><span class="code-muted">03</span> &nbsp;&nbsp;&nbsp; problem = <span class="code-green">"real"</span></p>
+              <p><span class="code-muted">04</span> &nbsp;&nbsp;&nbsp; data = <span class="code-yellow">validate</span>()</p>
+              <p><span class="code-muted">05</span> &nbsp;&nbsp;&nbsp; result = <span class="code-yellow">automate</span>(data)</p>
+              <p><span class="code-muted">06</span> &nbsp;&nbsp;&nbsp; <span class="code-purple">return</span> result</p>
+              <p class="code-output"><span class="code-muted">07</span> <span class="code-green"># Build. Test. Improve.</span></p>
+            </div>
+            <div class="terminal-bar">
+              <span class="terminal-indicator"></span>
+              <span data-es="SOLUCIONES EN CONSTRUCCIÓN" data-en="BUILDING SOLUTIONS">SOLUCIONES EN CONSTRUCCIÓN</span>
+            </div>
+          </div>
+          <div class="floating-chip chip-top"><span>01</span> DATA QUALITY</div>
+          <div class="floating-chip chip-bottom"><span>02</span> AUTOMATION</div>
+        </div>
+      </div>
+
+      <div class="container technology-strip">
+        <span>PYTHON</span><i></i>
+        <span>POSTGRESQL</span><i></i>
+        <span>FASTAPI</span><i></i>
+        <span>PYTEST</span><i></i>
+        <span>JAVASCRIPT</span><i></i>
+        <span>GIT</span>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">01 / ABOUT</span>
+          <h2 data-es="Tecnología con <span class='gradient-text'>propósito.</span>" data-en="Technology with <span class='gradient-text'>purpose.</span>">Tecnología con <span class="gradient-text">propósito.</span></h2>
+          <p data-es="Me interesa crear herramientas que ayuden a resolver problemas concretos, mejorar procesos y convertir datos en información útil." data-en="I'm interested in building tools that solve real problems, improve processes, and turn data into useful information.">Me interesa crear herramientas que ayuden a resolver problemas concretos, mejorar procesos y convertir datos en información útil.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <span class="about-number">01</span>
+            <h3 data-es="Calidad y confiabilidad" data-en="Quality and reliability">Calidad y confiabilidad</h3>
+            <p data-es="Validación de datos, reconciliación de información y pruebas para identificar inconsistencias." data-en="Data validation, information reconciliation, and testing to identify inconsistencies.">Validación de datos, reconciliación de información y pruebas para identificar inconsistencias.</p>
+          </article>
+          <article class="about-card">
+            <span class="about-number">02</span>
+            <h3 data-es="Automatización" data-en="Automation">Automatización</h3>
+            <p data-es="Desarrollo de herramientas que reduzcan tareas manuales y hagan los procesos más repetibles." data-en="Building tools that reduce manual work and make processes more repeatable.">Desarrollo de herramientas que reduzcan tareas manuales y hagan los procesos más repetibles.</p>
+          </article>
+          <article class="about-card">
+            <span class="about-number">03</span>
+            <h3 data-es="Aprendizaje aplicado" data-en="Applied learning">Aprendizaje aplicado</h3>
+            <p data-es="Proyectos personales documentados para practicar, experimentar y demostrar habilidades técnicas." data-en="Documented personal projects to practice, experiment, and demonstrate technical skills.">Proyectos personales documentados para practicar, experimentar y demostrar habilidades técnicas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">02 / SELECTED WORK</span>
+          <h2 data-es="Proyectos que puedes <span class='gradient-text'>explorar.</span>" data-en="Projects you can <span class='gradient-text'>explore.</span>">Proyectos que puedes <span class="gradient-text">explorar.</span></h2>
+          <p data-es="Proyectos personales que muestran mi forma de resolver problemas y aprender con tecnología." data-en="Personal projects that demonstrate how I solve problems and learn through technology.">Proyectos personales que muestran mi forma de resolver problemas y aprender con tecnología.</p>
+        </div>
+
+        <div class="project-filters" role="group" aria-label="Filtrar proyectos">
+          <button class="filter-button active" type="button" data-filter="all" data-es="Todos" data-en="All" aria-pressed="true">Todos</button>
+          <button class="filter-button" type="button" data-filter="data" data-es="Datos & QA" data-en="Data & QA" aria-pressed="false">Datos & QA</button>
+          <button class="filter-button" type="button" data-filter="dev" data-es="Desarrollo" data-en="Development" aria-pressed="false">Desarrollo</button>
+          <button class="filter-button" type="button" data-filter="security" data-es="Seguridad" data-en="Security" aria-pressed="false">Seguridad</button>
+          <button class="filter-button" type="button" data-filter="ai" data-es="IA & exploración" data-en="AI & exploration" aria-pressed="false">IA & exploración</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-featured" data-category="data dev">
+            <div class="project-topline">
+              <span class="project-index">PROJECT / 001</span>
+              <span class="project-status status-live" data-es="Demo publicada" data-en="Demo deployed">Demo publicada</span>
+            </div>
+
+            <div class="project-art data-art">
+              <img
+                src="assets/images/data-migration-qa/01-panel-control.png"
+                alt="Captura auténtica del panel de control de Data Migration QA"
+                loading="eager"
+              >
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>Pytest</span>
+              </div>
+              <h3>Data Migration QA</h3>
+              <p data-es="Herramienta de portafolio para comparar datos entre origen y destino, detectar registros faltantes o inesperados e identificar diferencias en campos. Incluye API y pruebas automatizadas." data-en="A portfolio tool for comparing source and target data, detecting missing or unexpected records, and identifying field-level differences. Includes an API and automated tests.">Herramienta de portafolio para comparar datos entre origen y destino, detectar registros faltantes o inesperados e identificar diferencias en campos. Incluye API y pruebas automatizadas.</p>
+              <div class="project-links">
+                <a href="https://data-migration-qa.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-es="Ver demo" data-en="Live demo">Ver demo</span> ↗</a>
+                <a href="https://github.com/Jonathanjimenez123/data-migration-qa" target="_blank" rel="noopener noreferrer"><span data-es="Código fuente" data-en="Source code">Código fuente</span> ↗</a>
+                <a href="https://data-migration-qa-api.onrender.com/docs" target="_blank" rel="noopener noreferrer"><span data-es="Documentación API" data-en="API docs">Documentación API</span> ↗</a>
+              </div>
+            </div>
+          </article>
+
+          
+<!-- PROJECT 002: WEBSEC AUDITOR -->
+<article class="project-card" data-category="security dev">
+  <div class="project-topline">
+    <span class="project-index">PROJECT / 002</span>
+    <span class="project-status status-live"
+          data-es="Demo publicada"
+          data-en="Live demo">Demo publicada</span>
+  </div>
+
+  <div class="project-art project-preview-art">
+    <a href="https://websec-auditor-two.vercel.app/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Abrir demo de WebSec Auditor">
+      <img
+        class="project-preview-image"
+        src="assets/images/websec-auditor/preview.png"
+        alt="Vista previa de la aplicación WebSec Auditor"
+        loading="lazy"
+      >
+    </a>
+  </div>
+
+  <div class="project-body">
+    <div class="project-tags">
+      <span>Python</span>
+      <span>FastAPI</span>
+      <span>React</span>
+      <span>Vite</span>
+      <span>Web Security</span>
+    </div>
+
+    <h3>WebSec Auditor</h3>
+
+    <p
+      data-es="Aplicación web de auditoría pasiva que permite revisar cabeceras HTTP relacionadas con la seguridad. Desarrollada como proyecto de aprendizaje y portafolio, con frontend web y API."
+      data-en="A passive web security auditing application for reviewing HTTP security headers. Built as a learning and portfolio project, with a web frontend and API."
+    >Aplicación web de auditoría pasiva que permite revisar cabeceras HTTP relacionadas con la seguridad. Desarrollada como proyecto de aprendizaje y portafolio, con frontend web y API.</p>
+
+    <div class="project-links">
+      <a href="https://websec-auditor-two.vercel.app/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span data-es="Ver demo" data-en="Live demo">Ver demo</span> ↗
+      </a>
+
+      <a href="https://github.com/Jonathanjimenez123/websec-auditor"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span data-es="Código fuente" data-en="Source code">Código fuente</span> ↗
+      </a>
+
+      <a href="https://websec-auditor-75vb.onrender.com/docs"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span data-es="Documentación API" data-en="API documentation">Documentación API</span> ↗
+      </a>
+    </div>
+  </div>
+</article>
+
+<!-- PROJECT 003: QUANTUM SECURITY / AI SHIELD -->
+<article class="project-card" data-category="ai security dev">
+  <div class="project-topline">
+    <span class="project-index">PROJECT / 003</span>
+    <span class="project-status status-live"
+          data-es="Demo publicada"
+          data-en="Live demo">Demo publicada</span>
+  </div>
+
+  <div class="project-art project-preview-art">
+    <a href="https://quantum-security.vercel.app/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Abrir demo de Quantum Security AI Shield">
+      <img
+        class="project-preview-image"
+        src="assets/images/quantum-security/preview.png"
+        alt="Vista previa de Quantum Security AI Shield"
+        loading="lazy"
+      >
+    </a>
+  </div>
+
+  <div class="project-body">
+    <div class="project-tags">
+      <span>AI</span>
+      <span>Cybersecurity</span>
+      <span>Web Development</span>
+      <span>Security</span>
+    </div>
+
+    <h3>Quantum Security / AI Shield</h3>
+
+    <p
+      data-es="Proyecto de tecnología y ciberseguridad presentado mediante una aplicación web publicada. Explora la propuesta AI Shield y permite conocer la experiencia disponible en la demo."
+      data-en="A technology and cybersecurity project presented through a deployed web application. Explore the AI Shield concept and the experience available in its demo."
+    >Proyecto de tecnología y ciberseguridad presentado mediante una aplicación web publicada. Explora la propuesta AI Shield y permite conocer la experiencia disponible en la demo.</p>
+
+    <div class="project-links">
+      <a href="https://quantum-security.vercel.app/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span data-es="Ver demo" data-en="Live demo">Ver demo</span> ↗
+      </a>
+
+      <a href="https://github.com/Jonathanjimenez123/quantum-security"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span data-es="Código fuente" data-en="Source code">Código fuente</span> ↗
+      </a>
+    </div>
+  </div>
+</article>
+
+
+          <article class="project-card" data-category="ai data">
+            <div class="project-topline">
+              <span class="project-index">PROJECT / 004</span>
+              <span class="project-status status-dev" data-es="Por verificar" data-en="To verify">Por verificar</span>
+            </div>
+            <div class="project-art insight-art">
+              <div class="insight-grid"></div>
+              <div class="insight-pulse"></div>
+              <span class="insight-label">INSIGHT / SIGNAL / ANALYSIS</span>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span>AI</span><span>Data</span><span>Analysis</span></div>
+              <h3>Insight Sentinel</h3>
+              <p data-es="Proyecto de exploración de análisis inteligente y detección de señales relevantes. Documentaremos el problema específico, las funciones y la demo después de revisar la versión disponible." data-en="An exploration of intelligent analysis and relevant signal detection. The specific problem, features, and demo will be documented after reviewing the available version.">Proyecto de exploración de análisis inteligente y detección de señales relevantes. Documentaremos el problema específico, las funciones y la demo después de revisar la versión disponible.</p>
+              <div class="project-links">
+                <a href="https://github.com/Jonathanjimenez123" target="_blank" rel="noopener noreferrer"><span data-es="Explorar GitHub" data-en="Explore GitHub">Explorar GitHub</span> ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ai dev">
+            <div class="project-topline">
+              <span class="project-index">PROJECT / 005</span>
+              <span class="project-status status-concept" data-es="Concepto" data-en="Concept">Concepto</span>
+            </div>
+            <div class="project-art hologram-art">
+              <div class="hologram-platform"></div>
+              <div class="hologram-figure"><span></span><i></i></div>
+              <span class="hologram-label">AI / IMMERSIVE EXPERIENCE</span>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span>AI</span><span>Unity</span><span>AR</span></div>
+              <h3>Ghost AI + Holograma</h3>
+              <p data-es="Concepto de experiencia inmersiva que explora inteligencia artificial, hologramas y realidad aumentada. Se definirán una demostración y una experiencia funcional antes de anunciar su publicación." data-en="An immersive concept exploring artificial intelligence, holograms, and augmented reality. A demo and functional experience will be defined before announcing a release.">Concepto de experiencia inmersiva que explora inteligencia artificial, hologramas y realidad aumentada. Se definirán una demostración y una experiencia funcional antes de anunciar su publicación.</p>
+              <div class="project-links">
+                <a href="https://github.com/Jonathanjimenez123" target="_blank" rel="noopener noreferrer"><span data-es="Explorar GitHub" data-en="Explore GitHub">Explorar GitHub</span> ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="security dev">
+            <div class="project-topline">
+              <span class="project-index">PROJECT / 006</span>
+              <span class="project-status status-dev" data-es="Sitio existente" data-en="Existing website">Sitio existente</span>
+            </div>
+            <div class="project-art hacker-art">
+              <div class="hacker-grid"></div>
+              <span class="hacker-terminal">&gt;_</span>
+              <span class="hacker-label">HACKERGENIOWORLD</span>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span>Cybersecurity</span><span>Education</span><span>Development</span></div>
+              <h3>HackerGenioWorld</h3>
+              <p data-es="Espacio de contenido y recursos sobre ciberseguridad, scripts, automatización y desarrollo. Revisaremos sus contenidos y presentación antes de incluirlo como proyecto terminado." data-en="A space for cybersecurity content and resources on scripts, automation, and development. Its content and presentation will be reviewed before listing it as a completed project.">Espacio de contenido y recursos sobre ciberseguridad, scripts, automatización y desarrollo. Revisaremos sus contenidos y presentación antes de incluirlo como proyecto terminado.</p>
+              <div class="project-links">
+                <a href="https://hackergenioworld.blogspot.com/" target="_blank" rel="noopener noreferrer"><span data-es="Visitar sitio" data-en="Visit website">Visitar sitio</span> ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="security dev">
+            <div class="project-topline">
+              <span class="project-index">PROJECT / 007</span>
+              <span class="project-status status-dev" data-es="Por verificar" data-en="To verify">Por verificar</span>
+            </div>
+            <div class="project-art scanner-art">
+              <div class="scanner-lines"></div>
+              <span class="scanner-label">JS / HISTORICAL SCANNER</span>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span>JavaScript</span><span>Security</span><span>Scanning</span></div>
+              <h3>JSFinder Historical Scanner</h3>
+              <p data-es="Herramienta relacionada con la búsqueda de recursos JavaScript históricos. Verificaremos el repositorio, las instrucciones de uso y los resultados reproducibles antes de publicar una demo." data-en="A tool related to discovering historical JavaScript resources. The repository, usage instructions, and reproducible results will be verified before publishing a demo.">Herramienta relacionada con la búsqueda de recursos JavaScript históricos. Verificaremos el repositorio, las instrucciones de uso y los resultados reproducibles antes de publicar una demo.</p>
+              <div class="project-links">
+                <a href="https://github.com/Jonathanjimenez123/jsfinder-historical-scanner" target="_blank" rel="noopener noreferrer"><span data-es="Código fuente" data-en="Source code">Código fuente</span> ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="security dev">
+            <div class="project-topline">
+              <span class="project-index">PROJECT / 008</span>
+              <span class="project-status status-dev" data-es="Por verificar" data-en="To verify">Por verificar</span>
+            </div>
+            <div class="project-art hunter-art">
+              <div class="hunter-crosshair"></div>
+              <span class="hunter-label">SECURITY RESEARCH</span>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span>Security</span><span>Python</span><span>Research</span></div>
+              <h3>Temu Vuln Hunter Pro</h3>
+              <p data-es="Proyecto de investigación de seguridad cuyo alcance, uso autorizado, documentación y resultados deben revisarse antes de describir sus capacidades públicamente." data-en="A security research project whose scope, authorized use, documentation, and results must be reviewed before publicly describing its capabilities.">Proyecto de investigación de seguridad cuyo alcance, uso autorizado, documentación y resultados deben revisarse antes de describir sus capacidades públicamente.</p>
+              <div class="project-links">
+                <a href="https://github.com/Jonathanjimenez123/temu-vuln-hunter-pro" target="_blank" rel="noopener noreferrer"><span data-es="Código fuente" data-en="Source code">Código fuente</span> ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-note" data-es="Las fichas se irán ampliando con páginas individuales, capturas auténticas, documentación y demos verificadas. Los estados reflejan lo que falta por revisar, no una afirmación de que todos los proyectos estén terminados." data-en="Project pages will be expanded with individual case studies, authentic screenshots, documentation, and verified demos. Status labels indicate what still needs review rather than claiming every project is complete.">Las fichas se irán ampliando con páginas individuales, capturas auténticas, documentación y demos verificadas. Los estados reflejan lo que falta por revisar, no una afirmación de que todos los proyectos estén terminados.</p>
+      </div>
+    </section>
+
+    <section class="section technologies-section" id="technologies">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">03 / TOOLKIT</span>
+          <h2 data-es="Tecnologías que utilizo." data-en="Technologies I use.">Tecnologías que utilizo.</h2>
+          <p data-es="Herramientas aplicadas en distintos proyectos personales. La selección se ampliará según las tecnologías verificadas de cada proyecto." data-en="Tools used across personal projects. This selection will grow based on the verified technologies in each project.">Herramientas aplicadas en distintos proyectos personales. La selección se ampliará según las tecnologías verificadas de cada proyecto.</p>
+        </div>
+
+        <div class="tech-grid">
+          <article class="tech-card"><span class="tech-symbol python-symbol">Py</span><h3>Python</h3><p data-es="Backend y automatización" data-en="Backend and automation">Backend y automatización</p><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Sitio oficial ↗</a></article>
+          <article class="tech-card"><span class="tech-symbol postgres-symbol">PG</span><h3>PostgreSQL</h3><p data-es="Bases de datos relacionales" data-en="Relational databases">Bases de datos relacionales</p><a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">Sitio oficial ↗</a></article>
+          <article class="tech-card"><span class="tech-symbol fastapi-symbol">API</span><h3>FastAPI</h3><p data-es="Construcción de APIs" data-en="API development">Construcción de APIs</p><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer">Sitio oficial ↗</a></article>
+          <article class="tech-card"><span class="tech-symbol react-symbol">Re</span><h3>React</h3><p data-es="Interfaces de usuario" data-en="User interfaces">Interfaces de usuario</p><a href="https://react.dev/" target="_blank" rel="noopener noreferrer">Sitio oficial ↗</a></article>
+          <article class="tech-card"><span class="tech-symbol pytest-symbol">PyT</span><h3>Pytest</h3><p data-es="Pruebas automatizadas" data-en="Automated testing">Pruebas automatizadas</p><a href="https://pytest.org/" target="_blank" rel="noopener noreferrer">Sitio oficial ↗</a></article>
+          <article class="tech-card"><span class="tech-symbol js-symbol">JS</span><h3>JavaScript</h3><p data-es="Desarrollo web" data-en="Web development">Desarrollo web</p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">Documentación ↗</a></article>
+          <article class="tech-card"><span class="tech-symbol git-symbol">Git</span><h3>Git & GitHub</h3><p data-es="Control de versiones" data-en="Version control">Control de versiones</p><a href="https://github.com/Jonathanjimenez123" target="_blank" rel="noopener noreferrer">Mi perfil ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">04 / EDUCATION</span>
+          <h2 data-es="Formación y certificaciones." data-en="Education and certifications.">Formación y certificaciones.</h2>
+          <p data-es="Una sección para reunir estudios, cursos, certificados y credenciales verificables." data-en="A section for degrees, courses, certificates, and verifiable credentials.">Una sección para reunir estudios, cursos, certificados y credenciales verificables.</p>
+        </div>
+
+        <div class="education-panel">
+          <div class="education-icon">01</div>
+          <div>
+            <span class="education-label" data-es="FORMACIÓN ACADÉMICA" data-en="ACADEMIC EDUCATION">FORMACIÓN ACADÉMICA</span>
+            <h3 data-es="Ingeniería de Sistemas" data-en="Systems Engineering">Ingeniería de Sistemas</h3>
+            <p data-es="Fundación Universitaria San José · Año de graduación previsto: , sujeto a confirmación del título." data-en="ingeniero en sistemas  · Expected graduation year: , subject to degree confirmation.">ingeniero en sistemas · Año de graduación previsto: , sujeto a confirmación del título.</p>
+          </div>
+          <span class="education-status" data-es="Verificar título" data-en="Verify degree">Verificar título</span>
+        </div>
+
+        <div class="education-panel">
+          <div class="education-icon">02</div>
+          <div>
+            <span class="education-label" data-es="FORMACIÓN TÉCNICA" data-en="TECHNICAL EDUCATION">FORMACIÓN TÉCNICA</span>
+            <h3 data-es="Tecnólogo en Gestión de Sistemas de Información" data-en="Technologist in Information Systems Management">Tecnólogo en Gestión de Sistemas de Información</h3>
+            <p data-es="Incluiremos los datos definitivos de la institución y los soportes correspondientes al organizar tus certificados." data-en="Institution details and supporting documents will be added when your certificates are organized.">Incluiremos los datos definitivos de la institución y los soportes correspondientes al organizar tus certificados.</p>
+          </div>
+          <span class="education-status" data-es="Pendiente de soportes" data-en="Documents pending">Pendiente de soportes</span>
+        </div>
+
+        <div class="education-panel">
+          <div class="education-icon">03</div>
+          <div>
+            <span class="education-label" data-es="CURSOS Y CREDENCIALES" data-en="COURSES AND CREDENTIALS">CURSOS Y CREDENCIALES</span>
+            <h3 data-es="Certificados de tecnología" data-en="Technology certificates">Certificados de tecnología</h3>
+            <p data-es="Prepararemos un catálogo con nombre del curso, institución, fecha, habilidades adquiridas e imagen o enlace de validación. Solo se publicarán credenciales que podamos comprobar." data-en="We will prepare a catalog with each course title, provider, date, skills learned, and certificate image or verification link. Only verifiable credentials will be published.">Prepararemos un catálogo con nombre del curso, institución, fecha, habilidades adquiridas e imagen o enlace de validación. Solo se publicarán credenciales que podamos comprobar.</p>
+          </div>
+          <a class="education-link" href="#contact" data-es="Agregar certificados" data-en="Add certificates">Agregar certificados</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profiles-section" id="profiles">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">05 / CONNECT</span>
+          <h2 data-es="Encuéntrame en la comunidad." data-en="Find me in the community.">Encuéntrame en la comunidad.</h2>
+          <p data-es="Perfiles para conocer mis proyectos, aprendizaje y actividad profesional." data-en="Profiles to explore my projects, learning, and professional activity.">Perfiles para conocer mis proyectos, aprendizaje y actividad profesional.</p>
+        </div>
+
+        <div class="profile-links">
+          <a href="https://github.com/Jonathanjimenez123" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://linkedin.com/in/jonathan-jimenez-escobar-360133163/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://gitlab.com/escobarjimenez7" target="_blank" rel="noopener noreferrer">GitLab ↗</a>
+          <a href="https://tryhackme.com/p/escobarjimenez7" target="_blank" rel="noopener noreferrer">TryHackMe ↗</a>
+          <a href="https://developers.google.com/profile/u/113361401074233467073?hl=es-419" target="_blank" rel="noopener noreferrer">Google Developers ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-container">
+        <span class="section-kicker">06 / CONTACT</span>
+        <h2 data-es="¿Construimos algo <span class='gradient-text'>útil?</span>" data-en="Let's build something <span class='gradient-text'>useful.</span>">¿Construimos algo <span class="gradient-text">útil?</span></h2>
+        <p data-es="Estoy interesado en oportunidades junior, colaboración en proyectos y retos relacionados con QA de datos, automatización y desarrollo backend." data-en="I'm interested in junior opportunities, project collaboration, and challenges involving data QA, automation, and backend development.">Estoy interesado en oportunidades junior, colaboración en proyectos y retos relacionados con QA de datos, automatización y desarrollo backend.</p>
+        <a class="button button-primary" href="https://linkedin.com/in/jonathan-jimenez-escobar-360133163/" target="_blank" rel="noopener noreferrer">
+          <span data-es="Conectar en LinkedIn" data-en="Connect on LinkedIn">Conectar en LinkedIn</span> ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark">J.</span>
+        <span class="brand-name">JONATHAN JIMÉNEZ<span class="brand-dot">.</span></span>
+      </a>
+      <p>© <span id="current-year"></span> Jonathan Jiménez Escobar. <span data-es="Construido con propósito." data-en="Built with purpose.">Construido con propósito.</span></p>
+      <a href="#home" class="back-to-top" aria-label="Volver arriba">↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿# Archivos privados
+.env
+.env.*
+!.env.example
+
+# Dependencias y compilaciones
+node_modules/
+dist/
+build/
+
+# Configuración local
+.vercel/
+
+# Respaldos y archivos temporales
+*.backup*
+*.bak
+*.log
+.DS_Store
+Thumbs.db
